@@ -2,7 +2,6 @@ import "./globals.css";
 import Header from "./components/header";
 import Footer from "./components/footer";
 import { Poppins } from "next/font/google";
-import { headers } from 'next/headers'; // Add this import
 
 export const metadata = {
   title: "Your Site Name",
@@ -16,20 +15,16 @@ const poppins = Poppins({
   variable: "--font-poppins",
 });
 
-const headerExcludedPages = [
-  'recruitment/case-practice'
-];
+
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  const pathName = headers().get('x-pathname') || '';
-  const shouldExcludeHeaderFooter = headerExcludedPages.includes(pathName);
 
   return (
     <html lang="en" className={poppins.variable}>
       <body>
-        {!shouldExcludeHeaderFooter && <Header />}
+        <Header />
         {children}
-        {!shouldExcludeHeaderFooter && <Footer />}
+        <Footer />
       </body>
     </html>
   );
