@@ -1,10 +1,11 @@
 export default function CasePracticeLayout({ children }: { children: React.ReactNode }) {
 
     return (
-    <html lang="en" className={poppins.variable}>
+    <html lang="en">
         <body>
         {children}
         </body>
     </html>
     );
+
 }
