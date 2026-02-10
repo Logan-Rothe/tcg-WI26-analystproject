@@ -2,7 +2,8 @@
     "name": "Spin Scooters: Unlocking the Problem",
     "time": 50,
     "sections":{
-        "section1":{
+        {
+            "id":"section1",
             "name":"Prompt and Initial Brainstorming",
             "time": 10,
             "type":"writing",
@@ -14,15 +15,20 @@
                 "showAnswer": true
             }
         },
-        "section2":{
+        {
+            "id":"section2",  
         },
-        "section3":{
+        {
+            "id":"section3",
         },
-        "section4":{
+        {
+            "id":"section4",
         },
-        "section5":{
+        {
+            "id":"section5",
         }
     }
 }
+
 
 
