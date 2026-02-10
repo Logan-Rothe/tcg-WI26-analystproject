@@ -95,6 +95,36 @@ export default function RecruitmentPage() {
             
           </div>
         </div>
+        <div className={styles.twoCol} style={{ alignItems: 'start' }}>
+          <div
+            className={styles.cardImage}
+            style={{ backgroundImage: "url('/recruitment-tcg.png')" }}
+            aria-hidden
+          />
+
+          <div>
+            <h2>Case Learning</h2>
+            <p className={styles.lead}>
+              Our first round of recruitment is case night, where students are put into teams to do a case altogether.
+            </p>
+
+            <p className={styles.lead}>
+              In order to prep for case nights, we have provided example cases as practice. It flows through the case portion by portion, timing each portion as would during case night. At the end, students may export a PDF of their answers along with the TCG provided answers to review. Best of luck to everyone!
+            </p>
+
+            <a
+               href="https://youtube.com/playlist?list=PLSZXI1eOuSUv2xYQAINf_ngd48EkaF51W&si=CvfwgoQM9_rhxnag"
+                target="_blank"
+                 rel="noopener noreferrer"
+                 className={styles.applyButton}
+                 style={{ marginTop: 18 }}
+               >
+                Practice Cases
+                </a>
+            
+          </div>
+        </div>
+        
 
 
         <div className={styles.timeline}>
