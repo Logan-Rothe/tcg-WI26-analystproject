@@ -6,11 +6,13 @@
             "name":"Prompt and Initial Brainstorming",
             "time": 10,
             "type":"writing",
-            "information":{
+            "content":{
                 "prompt":"Our client is Spin, a company that operates electric scooters on the UC San Diego campus. Historically, usage was strong, especially during peak hours when students needed quick rides in between classes. However, average monthly rides have declined steadily over the past few quarters, resulting in lower revenue and overall profitability. Spin has hired your team at TCG to investigate this decline and explore potential solutions to reverse the trend. Please brainstorm reasons as to why the business might see a decline in revenue and for each reason, examples of what that could specifically look like for Spin. Feel free to ask me as many clarifying questions as you would like. Once you feel settled in your brainstorm, present the brainstorm to me as if I did not hear your discussion"
             },
-            "answer": "What are potential issues on campus that could have led to the decline?",
-            "showAnswer": true
+            "answer": {
+                "example":"What are potential issues on campus that could have led to the decline?",
+                "showAnswer": true
+            }
         },
         "section2":{
         },
@@ -22,4 +24,5 @@
         }
     }
 }
+
 
