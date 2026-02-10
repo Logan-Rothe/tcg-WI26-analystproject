@@ -3,6 +3,7 @@ FORMAT FOR JSON CASE FILES:
 **Header**: Contains information surrounding the case itself
 - **Name**: Required String Field, Name of Case
 - **Time Limit**: Required Integer Field, Time of Case (Minutes)
+- **Sections**: Required Array field, all the sections for the case
 
   
 //From this point, each case is designed to be modular
@@ -19,6 +20,7 @@ FORMAT FOR JSON CASE FILES:
     - **prompt**: non-required text field, prompt provided
     - **hint**: non-required text field, guiding questions, or provided formulas, placed below prompt if provided
 - **Answer**: Required String Field, Example answer of question format
+
 
 
 
