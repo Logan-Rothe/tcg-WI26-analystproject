@@ -1,34 +1,119 @@
 {
-    "name": "Spin Scooters: Unlocking the Problem",
-    "time": 50,
-    "sections":{
-        {
-            "id":"section1",
-            "name":"Prompt and Initial Brainstorming",
-            "time": 10,
-            "type":"writing",
-            "content":{
-                "prompt":"Our client is Spin, a company that operates electric scooters on the UC San Diego campus. Historically, usage was strong, especially during peak hours when students needed quick rides in between classes. However, average monthly rides have declined steadily over the past few quarters, resulting in lower revenue and overall profitability. Spin has hired your team at TCG to investigate this decline and explore potential solutions to reverse the trend. Please brainstorm reasons as to why the business might see a decline in revenue and for each reason, examples of what that could specifically look like for Spin. Feel free to ask me as many clarifying questions as you would like. Once you feel settled in your brainstorm, present the brainstorm to me as if I did not hear your discussion"
-            },
-            "answer": {
-                "example":"What are potential issues on campus that could have led to the decline?",
-                "showAnswer": true
-            }
-        },
-        {
-            "id":"section2",  
-        },
-        {
-            "id":"section3",
-        },
-        {
-            "id":"section4",
-        },
-        {
-            "id":"section5",
-        }
+  "name": "Spin Scooters: Unlocking the Problem",
+  "time": 50,
+  "sections": [
+    {
+      "name": "Prompt and Initial Brainstorming",
+      "time": 10,
+      "type": "writing",
+      "content": {
+        "prompt": "Our client is Spin, a company that operates electric scooters on the UC San Diego campus. Historically, usage was strong, especially during peak hours when students needed quick rides in between classes. However, average monthly rides have declined steadily over the past few quarters, resulting in lower revenue and overall profitability. Spin has hired your team at TCG to investigate this decline and explore potential solutions to reverse the trend. Please brainstorm reasons as to why the business might see a decline in revenue and for each reason, examples of what that could specifically look like for Spin. Feel free to ask me as many clarifying questions as you would like. Once you feel settled in your brainstorm, present the brainstorm to me as if I did not hear your discussion.",
+        "images": [],
+        "hint": ""
+      },
+      "answer": {
+        "showAnswer": true,
+        "type": "table",
+        "headers": ["Category", "Potential Issues"],
+        "rows": [
+          ["Operations", "Are scooters not being maintained or broken?"],
+          ["Operations", "Is it the app that's causing issues?"],
+          ["Operations", "Are there multiple refunds that need to be processed? Are they costly?"],
+          ["Campus/Environment", "Are there fewer students going to classes post-COVID?"],
+          ["Campus/Environment", "Spotty connectivity in busy areas could cause issues"],
+          ["Campus/Environment", "Do people prefer buses, shuttles, or walking?"],
+          ["User Experience", "Persistent failed attempts may cause users to become frustrated, influence their friends against Spin"],
+          ["User Experience", "Continually unsatisfied users cause brand perception to go down, and value decreases"],
+          ["Potential Solutions", "Technical fixes like Bluetooth unlock, QR code/offline unlock, and UCSD Wi-Fi partnership"],
+          ["Potential Solutions", "Operational fixes like placing scooters in better-connected areas speed up refunds"],
+          ["Potential Solutions", "Pricing/incentives like ride credits or discounts to rebuild trust"]
+        ]
+      }
+    },
+    {
+      "name": "Framework Development",
+      "time": 10,
+      "type": "framework",
+      "content": {
+        "prompt": "Using survey data, your team has found that a primary reason for the usage drop is that students are often unable to unlock scooters due to spotty cellular service on parts of campus. To combat this, Spin's team has developed a solution that achieves a 100% success rate: a tap-to-ride system that allows students to unlock scooters using their UCSD ID, with no cellular connection required. Spin has requested that your team develop a framework to assess whether this feature is a good investment.",
+        "images": [],
+        "hint": ""
+      },
+      "answer": {
+        "showAnswer": true,
+        "type": "table",
+        "headers": ["Category", "Considerations"],
+        "rows": [
+          ["Pros - User Experience", "No need for a cellular signal, and increases reliability"],
+          ["Pros - User Experience", "Builds trust, better brand reception, and reputation - fewer complaints"],
+          ["Pros - Efficiency", "Faster unlock and smoother rides, reducing time to get to class"],
+          ["Pros - Finances", "Fewer refunds, standardizing Spin access across campus"],
+          ["Pros - Finances", "Student ID carried regularly, existing methods of payment (Triton cash, dining dollars)"],
+          ["Pros - Finances", "Expected increase monthly - ROI soon, long-term savings"],
+          ["Pros - Strategic", "Strengthens partnership with UCSD- can be implemented in other big campuses with similar problems"],
+          ["Pros - Strategic", "Differentiates Spin from competitors"],
+          ["Pros - Finances", "Reduced customer service costs"],
+          ["Cons - User Adoption", "Shift from app to ID costs time and money"],
+          ["Cons - User Adoption", "Inaccessible to non-UCSD members"],
+          ["Cons - Operations", "Dependence on UCSD IT system for regulation→ delays"],
+          ["Cons - Operations", "Maintenance cost of new hardware"],
+          ["Cons - Losses", "Installation cost and effort, high upfront investment cost"],
+          ["Cons - Losses", "Marketing cost of the new feature"],
+          ["Cons - User Adoption", "Risk of slow adoption"],
+          ["Cons - Tradeoffs", "Reduced app engagement, hard to gain user data, market, etc."],
+          ["Cons - Losses", "Initial customer service costs"]
+        ]
+      }
+    },
+    {
+      "name": "Financial Analysis",
+      "time": 5,
+      "type": "writing",
+      "content": {
+        "prompt": "As part of your evaluation, Spin has provided your team with the following operational and financial data related to their estimated implementation and projected impact. Spin expects a 30% increase in monthly rides with this feature. Spin wants to know if this feature will help them break even within 12 months of implementation. The following exhibit includes these cost estimates.",
+        "images": [],
+        "hint": ""
+      },
+      "answer": {
+        "showAnswer": true,
+        "type": "table",
+        "headers": ["Component", "Calculation", "Amount"],
+        "rows": [
+          ["Implementation Cost - Fixed", "$110 × 200 scooters (hardware + installation) + $10,000 (integration) + $4,000 (UCSD system) + $2,000 × 2 (initial maintenance)", "$40,000"],
+          ["Implementation Cost - Variable", "$500/month × 10 months (maintenance) + $1,000/year (customer support) + $600/month × 6 months (marketing)", "$9,600"],
+          ["Total Implementation Cost", "$40,000 + $9,600", "$49,600"],
+          ["Revenue per Ride", "$1 unlock fee + $0.50/min × 7 minutes avg", "$4.50"],
+          ["Additional Rides per Year", "30% × 9,000 rides/month × 12 months", "32,400 rides"],
+          ["Additional Annual Revenue", "32,400 rides × $4.50/ride", "$145,800"],
+          ["First Year Profit", "$145,800 - $49,600", "$96,200"]
+        ]
+      }
+    },
+    {
+      "name": "Final Recommendation",
+      "time": 10,
+      "type": "writing",
+      "content": {
+        "prompt": "The CEO of Spin is at UCSD right now, asking what your findings have been and whether this proposal would be a good idea. Finalize your team's recommendation and present your conclusion and next steps to her.",
+        "images": [],
+        "hint": ""
+      },
+      "answer": {
+        "showAnswer": true,
+        "type": "table",
+        "headers": ["Section", "Details"],
+        "rows": [
+          ["Recommendation", "Spin should implement the UCSD ID tap-to-ride feature across its scooter fleet. The investment addresses the core usability issue that caused ridership decline and is expected to become profitable within the first year."],
+          ["Process Summary", "Identified the reason for declining usage (spotty cellular connectivity), created a pros/cons framework for the proposed solution, calculated estimated profit of $96,200 in the first year, demonstrating positive ROI."],
+          ["Risk - User Adoption", "Not all students may immediately switch to using their UCSD ID cards, especially those accustomed to the app or upperclassmen who might not carry their ID cards with them."],
+          ["Risk - Technical", "Integration with UCSD's ID system may face delays or technical complications."],
+          ["Risk - Operations", "Bluetooth hardware may require more frequent upkeep or troubleshooting than expected."],
+          ["Risk - Strategic", "Reduced app engagement could limit future data insights and monetization opportunities."],
+          ["Next Steps - Marketing", "Develop a marketing plan focused on ERC and other dead-zone areas. Consider offering small ride credits to early adopters for the first month to drive usage."],
+          ["Next Steps - Tracking", "Find a way to track ridership growth, ID unlock usage rate, and refund reduction."],
+          ["Next Steps - Partnership", "Collaborate with UCSD IT + Student Affairs to plan integration timing and student communication."]
+        ]
+      }
     }
+  ]
 }
-
-
-
