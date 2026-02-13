@@ -1,5 +1,5 @@
-import {getCaseData} from '@/app/recruitment/case-practice/static/index.js';
-import {CaseData} from '@/app/recruitment/case-practice/static/types.js';
+import {getCaseData} from './static';
+import {CaseData} from './static/types';
 //This page contains all of the cases
 //TODO: Build case selection component
 export default function CaseLandingPage(){
