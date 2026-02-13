@@ -1,6 +1,5 @@
-"use client";
 
-import {getCaseData} from './static';
+import {getAllCases} from './static';
 import {CaseData} from './static/types';
 import { useEffect } from "react";
 //This page contains all of the cases
@@ -8,7 +7,7 @@ import { useEffect } from "react";
 export default function CaseLandingPage(){
     
 
-    const practice : Record<string, CaseData> = getCaseData();
+    const practice : Record<string, CaseData> = getAllCases();
     
     return(
         <div>
