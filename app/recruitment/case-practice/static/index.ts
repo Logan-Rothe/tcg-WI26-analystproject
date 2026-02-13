@@ -1,4 +1,4 @@
-import {CaseData} from '../types';
+import {CaseData} from './types';
 
 const caseJsonFiles = import.meta.glob('./static/*.json');
 
