@@ -1,3 +1,5 @@
+/// <reference types="vite/client" />
+
 import {CaseData} from './types';
 
 const caseJsonFiles = import.meta.glob('./static/*.json');
