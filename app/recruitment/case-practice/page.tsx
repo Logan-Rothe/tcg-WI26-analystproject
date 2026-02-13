@@ -1,3 +1,5 @@
+"use client";
+
 import {getCaseData} from './static';
 import {CaseData} from './static/types';
 import { useEffect } from "react";
