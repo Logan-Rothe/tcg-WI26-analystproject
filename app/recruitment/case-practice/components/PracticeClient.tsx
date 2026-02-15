@@ -64,7 +64,7 @@ export default function PracticeClient({caseData, pathName} : Props){
             <div>
                 <Timer
                     section={currentSectionData}
-                    duration={10}
+                    duration={currentSectionData.time * 60}
                     onExpire={handleTimeExpire}
                 >
 
@@ -85,7 +85,7 @@ export default function PracticeClient({caseData, pathName} : Props){
                     <div>  Brainstorm input component coming soon</div>
                 )}
                 {currentSectionType === "framework" && (
-                    <div>Framework input component coming soon {userAnswers[0].userInput}</div>
+                    <div>Proof of User answer {userAnswers[0].userInput}</div>
                 )}
             </div>
         </>
