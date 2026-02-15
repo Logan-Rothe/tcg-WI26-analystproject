@@ -1,0 +1,120 @@
+{
+  "name": "Music Festival Expansion",
+  "time": 50,
+  "description": "A music festival with flat revenue growth is considering two strategies: raising ticket prices or adding a second weekend. Develop a framework to evaluate both options, analyze pricing power through quantitative analysis, and deliver a final recommendation to festival leadership.",
+  "sections": [
+    {
+      "name": "Prompt and Initial Brainstorming",
+      "time": 10,
+      "type": "writing",
+      "content": {
+        "prompt": "A well-known annual music festival has been operating successfully in one city for several years, but despite consistently selling out tickets, it has seen flat revenue growth. Festival leadership aims to increase total revenue for the upcoming festival season and is considering two potential strategies. Option A is to increase ticket prices. Option B is to add a second weekend to the festival. With your group, develop a framework to evaluate these two options. Think about what factors matter and how you would compare the tradeoffs. Feel free to ask me as many clarifying questions as you would like. When you're ready, present your brainstorm to me as if I did not hear your discussion.",
+        "images": [],
+        "hint": ""
+      },
+      "answer": {
+        "showAnswer": true,
+        "type": "table",
+        "headers": ["Category", "Considerations"],
+        "rows": [
+          ["Finances - Revenue & Cost", "Option A: How much would ticket prices increase?"],
+          ["Finances - Revenue & Cost", "Option B: How many additional tickets could be sold, and at what cost?"],
+          ["Attendee Demand & Experience", "Option A: How price-sensitive are attendees? How would this affect brand perception (exclusivity, artist quality, crowd energy)?"],
+          ["Attendee Demand & Experience", "Option B: Is there enough demand for another weekend?"],
+          ["Feasibility of Implementation", "Option A: How easy is it to change pricing without affecting brand perception?"],
+          ["Feasibility of Implementation", "Option B: How operationally complex is adding another day or weekend?"],
+          ["Risks", "Option A: Risk of reduced demand or brand backlash"],
+          ["Risks", "Option B: Risk of execution failure or lower-quality experience"]
+        ]
+      }
+    },
+    {
+      "name": "Exhibit Analysis",
+      "time": 5,
+      "type": "writing",
+      "content": {
+        "prompt": "Here's some data on ticket demand and attendance patterns for the festival. What do you think about these graphs? How do you interpret this?",
+        "images": [],
+        "hint": "Consider what the sell-out patterns suggest about pricing power and expansion potential"
+      },
+      "answer": {
+        "showAnswer": true,
+        "type": "table",
+        "headers": ["Interpretation", "Details"],
+        "rows": [
+          ["Supporting Option A", "Strong sell-outs suggest pricing power; attendees may tolerate higher prices"],
+          ["Supporting Option B", "Strong sell-out on Friday and Saturdays suggests room to expand without fully diluting demand"],
+          ["Additional Data Needed", "Price sensitivity data or artist costs would help validate either option"]
+        ]
+      }
+    },
+    {
+      "name": "Quantitative Analysis",
+      "time": 15,
+      "type": "writing",
+      "content": {
+        "prompt": "Festival leadership is cautious about expanding the event too quickly due to brand risk, so they want to analyze Option A, raising ticket prices, more closely. They want to hit a goal of increasing revenue by 20%. There are currently 90,000 festival attendees. The average ticket price right now is $300. The proposed new average ticket price is $375. Using this data, please answer the following question: If the festival raises ticket prices as proposed, how many attendees could it lose and still increase total revenue by 20%?",
+        "images": [],
+        "hint": ""
+      },
+      "answer": {
+        "showAnswer": true,
+        "type": "table",
+        "headers": ["Step", "Calculation", "Result"],
+        "rows": [
+          ["Current Revenue", "90,000 attendees × $300", "$27,000,000"],
+          ["Target Revenue (20% increase)", "$27M × 120%", "$32,400,000"],
+          ["Required Attendance at New Price", "$32.4M ÷ $375", "86,400 attendees"],
+          ["Maximum Attendee Loss", "90,000 – 86,400", "3,600 attendees"],
+          ["Conclusion", "The festival could lose 4% of attendees", "Still achieve 20% revenue increase"]
+        ]
+      }
+    },
+    {
+      "name": "Risk Analysis and Mitigation",
+      "time": 10,
+      "type": "writing",
+      "content": {
+        "prompt": "Based on your analysis, festival leadership is leaning toward Option A (raising ticket prices). With your group, brainstorm the key risks or challenges of implementing this strategy and how the festival could mitigate them.",
+        "images": [],
+        "hint": "Consider both financial and brand/experience risks, and propose concrete mitigations"
+      },
+      "answer": {
+        "showAnswer": true,
+        "type": "table",
+        "headers": ["Risk Category", "Risk", "Mitigation Strategy"],
+        "rows": [
+          ["Financial Risk", "Attendance could drop by more than expected, preventing revenue target", "Introduce price increase as limited pilot; conduct market research; communicate changes clearly"],
+          ["Financial Risk", "Higher prices may extract money from loyal fans rather than attracting new demand", "Use tiered pricing or premium add-ons"],
+          ["Brand & Experience Risk", "Higher prices could make festival feel less accessible or harm reputation", "Pair price change with visible experience upgrades; increase artist quality"],
+          ["Brand & Experience Risk", "Smaller or less diverse crowd could negatively impact festival atmosphere", "Offer early-bird or discounted tickets to maintain accessibility"]
+        ]
+      }
+    },
+    {
+      "name": "Final Recommendation",
+      "time": 10,
+      "type": "writing",
+      "content": {
+        "prompt": "Your team is about to present to festival leadership. They expect to hear which option you recommend and why. With your team, finalize your recommendation and outline next steps.",
+        "images": [],
+        "hint": ""
+      },
+      "answer": {
+        "showAnswer": true,
+        "type": "table",
+        "headers": ["Section", "Details"],
+        "rows": [
+          ["Recommendation", "Recommend pursuing a controlled version of Option A (raising ticket prices)"],
+          ["Reasoning", "The festival consistently sells out, suggesting pricing power. Math shows festival could lose up to 3,600 attendees (~4%) and still achieve 20% revenue increase."],
+          ["Risk - Demand", "Attendance could fall by more than expected, preventing revenue target and damaging brand"],
+          ["Risk - Experience", "Higher prices may alienate loyal attendees or change festival's overall experience"],
+          ["Next Steps - Pricing", "Implement tiered or premium pricing instead of uniform price increase"],
+          ["Next Steps - Testing", "Run a pricing pilot across ticket types to gauge sensitivity"],
+          ["Next Steps - Marketing", "Pair price increase with clear value enhancements and marketing"],
+          ["Next Steps - Future", "Re-evaluate option of adding a second weekend in the future"]
+        ]
+      }
+    }
+  ]
+}

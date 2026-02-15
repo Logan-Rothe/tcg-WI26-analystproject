@@ -1,0 +1,121 @@
+{
+  "name": "City Public Transit Sustainability",
+  "time": 50,
+  "description": "A mid-sized city's public transit system is losing money. Evaluate two solutions: lowering fares to increase ridership or reducing service on low-utilization routes. Analyze demand patterns, calculate required ridership increases, and recommend a financially sustainable path forward.",
+  "sections": [
+    {
+      "name": "Prompt and Initial Brainstorming",
+      "time": 10,
+      "type": "writing",
+      "content": {
+        "prompt": "A mid-sized city's public transit system has been losing money in recent years. City leaders are considering two solutions to improve the system's financial sustainability. Option A is to lower fares across the system to increase ridership. Option B is to reduce the servicing of low-utilization routes to cut operating costs. With your group, develop a framework to evaluate these two options. Think about what factors matter and how you would compare the tradeoffs. Feel free to ask me as many clarifying questions as you would like. When you're ready, present your brainstorm to me as if I did not hear your discussion.",
+        "images": [],
+        "hint": ""
+      },
+      "answer": {
+        "showAnswer": true,
+        "type": "table",
+        "headers": ["Category", "Considerations"],
+        "rows": [
+          ["Finances - Revenue & Cost", "Option A: How much would fare decrease, and how much would ridership need to increase?"],
+          ["Finances - Revenue & Cost", "Option B: How much operating cost could be saved by reducing routes or times?"],
+          ["Rider Impact", "Option A: Which rider segments are most likely to increase usage if fares fall?"],
+          ["Rider Impact", "Option B: How much ridership could be lost due to cut routes or longer wait times?"],
+          ["Feasibility of Implementation", "Option A: How operationally complex is changing fare, and how quickly could it be implemented?"],
+          ["Feasibility of Implementation", "Option B: How long before service cuts translate into real cost savings?"],
+          ["Risks", "Option A: What if ridership does not increase enough to offset lower fares? Fare changes may be hard to reverse."],
+          ["Risks", "Option B: Could cutting routes reduce ridership or disproportionately impact low-income riders? Service cuts can be piloted more easily."]
+        ]
+      }
+    },
+    {
+      "name": "Exhibit Analysis",
+      "time": 5,
+      "type": "writing",
+      "content": {
+        "prompt": "Here's some data on how transit service is scheduled throughout the day, compared with when riders actually use the system. What do you think about these graphs? How do you interpret this?",
+        "images": [],
+        "hint": "Consider what the utilization patterns suggest about each option"
+      },
+      "answer": {
+        "showAnswer": true,
+        "type": "table",
+        "headers": ["Interpretation", "Details"],
+        "rows": [
+          ["Supporting Option A", "Off-peak service seems underutilized, so lowering fares could increase ridership without increasing costs. Assumes off-peak riders are price sensitive."],
+          ["Supporting Option B", "Demand is weak off-peak, so we should reduce service where people aren't riding and cut costs. Assumes cost savings outweigh ridership loss and equity risk is manageable."],
+          ["Additional Data Needed", "Data on price elasticity, cost structure by route/time, or demographic impacts would help validate either option"]
+        ]
+      }
+    },
+    {
+      "name": "Quantitative Analysis",
+      "time": 15,
+      "type": "writing",
+      "content": {
+        "prompt": "The city is hesitant to cut public transit service due to equity concerns. Therefore, they want to look into the logistics of option A (lowering fare rates to increase ridership). The annual ridership is 160 million, the fare per ride is $3.50, and the proposed new fare per ride is $3.00. Please use this data and discuss with your group to answer the following question: if the city lowers fares as proposed, how much would ridership need to increase to increase revenue by 10%?",
+        "images": [],
+        "hint": ""
+      },
+      "answer": {
+        "showAnswer": true,
+        "type": "table",
+        "headers": ["Step", "Calculation", "Result"],
+        "rows": [
+          ["Current Revenue", "160M rides × $3.50 fare", "$560,000,000"],
+          ["Target Revenue (10% increase)", "$560M × 110%", "$616,000,000"],
+          ["Required Total Rides", "$616M ÷ $3.00 new fare", "205.3M rides"],
+          ["Required Ridership Increase", "205M – 160M", "45M additional rides"],
+          ["Conclusion", "Ridership must increase by ~28%", "To achieve 10% revenue increase"]
+        ]
+      }
+    },
+    {
+      "name": "Risk Analysis and Mitigation",
+      "time": 10,
+      "type": "writing",
+      "content": {
+        "prompt": "Based on your analysis, the city is leaning toward lowering fares to increase ridership. With your group, brainstorm the key risks or challenges of implementing this strategy and how the city could mitigate them.",
+        "images": [],
+        "hint": "Think beyond revenue - consider implementation, political feasibility, rider behavior, and operational strain"
+      },
+      "answer": {
+        "showAnswer": true,
+        "type": "table",
+        "headers": ["Risk Category", "Risk", "Mitigation Strategy"],
+        "rows": [
+          ["Financial Risk", "Ridership does not increase enough to offset lower fares", "Run a pilot or focus on off-peak hours where there is unused capacity"],
+          ["Financial Risk", "Lower fares mainly benefit existing riders rather than attracting new trips", "Target discounts for price-sensitive segments or increase marketing/awareness"],
+          ["Operational Risk", "Increased ridership causes overcrowding in vehicles", "Limit fare reductions to off-peak periods"],
+          ["Operational Risk", "Current system cannot handle more riders without adding more service", "Pilot or reallocate existing resources from underutilized routes or times"]
+        ]
+      }
+    },
+    {
+      "name": "Final Recommendation",
+      "time": 10,
+      "type": "writing",
+      "content": {
+        "prompt": "Your team is about to present to the city's council. They expect to hear about your findings of which solution is better and why. Finalize your team's recommendation and present your conclusion and next steps to them.",
+        "images": [],
+        "hint": ""
+      },
+      "answer": {
+        "showAnswer": true,
+        "type": "table",
+        "headers": ["Section", "Details"],
+        "rows": [
+          ["Recommendation", "A controlled version of Option A is the best path forward"],
+          ["Reasoning", "The exhibit suggests off-peak underutilization - there is room to add riders without immediately adding service. Option B might raise equity concerns."],
+          ["Risk - Ridership Target", "City would need about 45M additional rides (~28% increase) to achieve 10% revenue increase. This is ambitious."],
+          ["Risk - Reversibility", "System-wide fare cut might be difficult to reverse politically if it fails"],
+          ["Risk - Impact Size", "A fare drop from $3.50 to $3.25 might not be meaningful enough to encourage new riders"],
+          ["Next Steps - Pilot", "Run a pilot targeting off-peak times/specific routes with lowest utilization"],
+          ["Next Steps - Testing", "Test larger fare discounts to better gauge demand elasticity"],
+          ["Next Steps - Communication", "Pair fare change with clear communication/marketing so riders are aware"],
+          ["Next Steps - Incentives", "Consider bundled incentives (e.g., multi-ride passes or loyalty credits) to amplify impact"]
+        ]
+      }
+    }
+  ]
+}
