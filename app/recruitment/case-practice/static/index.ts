@@ -34,7 +34,7 @@ export function getAllCases(): Record<string, CaseData> {
 /**
  * Get a single case by name
  */
-export function getCaseByName(caseName: string): CaseData | null {
+export function getCaseByPathName(caseName: string): CaseData | null {
   const cases = getAllCases();
   return cases[caseName] || null;
 }

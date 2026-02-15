@@ -2,6 +2,7 @@ FORMAT FOR JSON CASE FILES:
 
 - **Name**: Required String Field, Name of Case
 - **Time Limit**: Required Integer Field, Time of Case (Minutes)
+- **Description**: Required String Field, short description of case
 - **Sections**: Required Array field, all the sections for the case
 
   

@@ -1,6 +1,7 @@
 {
   "name": "Spin Scooters: Unlocking the Problem",
   "time": 50,
+  "description":"Investigate why Spin's electric scooter usage on UCSD campus has declined over recent quarters. Analyze the root cause, evaluate a proposed tap-to-ride solution using student IDs, calculate financial viability, and deliver a final recommendation to the CEO.",
   "sections": [
     {
       "name": "Prompt and Initial Brainstorming",

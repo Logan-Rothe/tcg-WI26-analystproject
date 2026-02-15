@@ -113,7 +113,7 @@ export default function RecruitmentPage() {
             </p>
 
             <a
-               href="https://youtube.com/playlist?list=PLSZXI1eOuSUv2xYQAINf_ngd48EkaF51W&si=CvfwgoQM9_rhxnag"
+               href="/recruitment/case-practice"
                 target="_blank"
                  rel="noopener noreferrer"
                  className={styles.applyButton}

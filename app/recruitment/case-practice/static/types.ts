@@ -4,6 +4,7 @@
 export interface CaseData {
   name: string;
   time: number;
+  description: string;
   sections: Section[];
 }
 
