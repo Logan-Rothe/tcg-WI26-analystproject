@@ -1,0 +1,124 @@
+/* Case info page only – matches sample design. No other pages or files use this. */
+.wrapper {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.card {
+  max-width: 640px;
+  width: 100%;
+  background: #004d5f;
+  border-radius: 28px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+
+.caseTitle {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #e0e0e0;
+  margin: 0 0 0.5rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: 1.3;
+}
+
+.caseLabel {
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #e0e0e0;
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.caseMeta {
+  font-size: 0.95rem;
+  color: #e0e0e0;
+  margin-bottom: 1.25rem;
+}
+
+.caseDescription {
+  color: #e0e0e0;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.warning {
+  background: rgba(255, 255, 255, 0.1);
+  color: #e0e0e0;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.buttonGroup {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.startButton {
+  display: inline-block;
+  background: #38a838;
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border: 2px solid #2d8a2d;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: background 0.2s, transform 0.15s;
+}
+
+.startButton:hover {
+  background: #3eb83e;
+  transform: translateY(-1px);
+}
+
+.backButton {
+  display: inline-block;
+  background: #d92525;
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border: 2px solid #b91c1c;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: background 0.2s, transform 0.15s;
+}
+
+.backButton:hover {
+  background: #e03030;
+  transform: translateY(-1px);
+}
+
+.notFound {
+  text-align: center;
+  padding: 3rem 2rem;
+  color: #6b7280;
+}
