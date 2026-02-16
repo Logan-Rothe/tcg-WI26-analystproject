@@ -1,6 +1,6 @@
 .timerPill {
-    width: 175px; 
-    height: 45px;
+    width: 135px; 
+    height: 35px;
     background: #0f4e74;
     border-radius: 20px;
     display: flex;
@@ -8,7 +8,7 @@
     justify-content: center;
   
     color: white;
-    font-size: 30px;    
+    font-size: 22px;    
     font-weight: 500;
     letter-spacing: 1px;
   }
