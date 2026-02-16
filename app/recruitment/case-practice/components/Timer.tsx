@@ -2,6 +2,8 @@
 
 import { Section } from '../static/types';
 import { useState, useEffect, useRef } from 'react';
+import styles from './Timer.module.css';
+
 
 interface Props{
     section: Section;
@@ -62,10 +64,14 @@ export default function Timer({section, duration, onExpire}: Props){
     }, [timeRemaining, onExpire]);
 
     return (
-        <div>
-            {isRunning ? 'Time Remaining' : 'Time Expired'}
+        <div className={styles.timerWrapper}>
+          <div className={styles.timerPill}>
             {formatTime(timeRemaining)}
+          </div>
         </div>
-    )
+      );
+      
+          
 
 }
+

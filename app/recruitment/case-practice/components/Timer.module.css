@@ -1,0 +1,21 @@
+.timerPill {
+    width: 175px; 
+    height: 45px;
+    background: #0f4e74;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    color: white;
+    font-size: 30px;    
+    font-weight: 500;
+    letter-spacing: 1px;
+  }
+
+.timerWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
