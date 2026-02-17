@@ -5,6 +5,8 @@ import { useState, useCallback } from 'react';
 import { CaseData, Section } from '../static/types';
 import WritingInput from './input/WritingInput';
 import Timer from './Timer';
+import styles from "./PracticeClient.module.css";
+
 
 interface Props {
     caseData : CaseData | null;
@@ -55,11 +57,17 @@ export default function PracticeClient({caseData, pathName} : Props){
     return(
         <>
             {/* Header */}
-            <div>
+            <div className={styles.header}>
+            <div className={styles.sectionLine}>
                 Section {currentSection + 1} of {numberOfSections}
             </div>
-            <div>
-                Name: {currentSectionData?.name}
+
+            <div className={styles.nameRow}>
+                <span className={styles.nameLabel}>Name: </span>
+                <span className={styles.nameValue}>{currentSectionData?.name}</span>
+            </div>
+
+        <   div className={styles.headerDivider} />
             </div>
             <div>
                 <Timer
