@@ -65,7 +65,21 @@ export default function WritingInput({ section, onSubmit, timeExpired }: Props) 
                 style={{ width: `${left}%`}}
             >
                 <p className={styles.prompt}>
-                    {section.content.prompt}</p>
+                    {section.content.prompt}
+                </p>
+                {/* Images Section */}
+                {section.content.images.map((img, idx) => (
+                    <img 
+                        key={idx} 
+                        src={img.url} 
+                        alt={img.alt}
+                        className={styles.image} 
+                    />
+                ))}
+                {/* Hint Section */}
+                {section.content.hint && (
+                    <p className={styles.hint}>{section.content.hint}</p>
+                )}
             </div>
             <div
                 className={styles.divider}

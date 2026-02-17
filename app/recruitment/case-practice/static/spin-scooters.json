@@ -72,7 +72,12 @@
       "type": "writing",
       "content": {
         "prompt": "As part of your evaluation, Spin has provided your team with the following operational and financial data related to their estimated implementation and projected impact. Spin expects a 30% increase in monthly rides with this feature. Spin wants to know if this feature will help them break even within 12 months of implementation. The following exhibit includes these cost estimates.",
-        "images": [],
+        "images": [
+          {
+            "url": "/recruitment/practice-cases/spin-scooter/spin-scooter-exhibit-one.png",
+            "alt":"Spin Scooter Financial and Cost Data"
+          }
+        ],
         "hint": ""
       },
       "answer": {

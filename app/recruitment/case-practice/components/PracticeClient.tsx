@@ -90,10 +90,18 @@ export default function PracticeClient({caseData, pathName} : Props){
                 )}
                 {currentSectionType === "brainstorm" && (
                     
-                    <div>  Brainstorm input component coming soon</div>
+                    <WritingInput 
+                        section={currentSectionData}
+                        onSubmit={handleSectionComplete}
+                        timeExpired={timeExpired}
+                    />
                 )}
                 {currentSectionType === "framework" && (
-                    <div>Proof of User answer {userAnswers[0].userInput}</div>
+                    <WritingInput 
+                        section={currentSectionData}
+                        onSubmit={handleSectionComplete}
+                        timeExpired={timeExpired}
+                    />
                 )}
             </div>
         </>
