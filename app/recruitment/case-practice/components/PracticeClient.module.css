@@ -1,0 +1,38 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    margin: 24px 0 10px;
+    padding-left: 40px;  
+    padding-right: 40px; 
+  }
+
+  
+  .sectionLine,
+  .nameRow {
+    font-size: 18px;
+    font-weight: 600;
+    color: #0f172a;
+  }
+
+  
+  .nameLabel {
+    font-size: 18px;
+    font-weight: 600;
+    color: #0f172a;
+  }
+  
+  .nameValue {
+    font-size: 18px;
+    font-weight: 600;
+    color: #0f172a;
+  }
+  
+  .headerDivider {
+    height: 1px;
+    width: 100%;
+    background: rgba(15, 23, 42, 0.12);
+    margin-top: 10px;
+  }
+  
