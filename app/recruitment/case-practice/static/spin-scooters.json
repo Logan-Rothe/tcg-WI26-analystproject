@@ -13,7 +13,7 @@
         "hint": ""
       },
       "answer": {
-        "showAnswer": true,
+        "showAnswer": false,
         "type": "table",
         "headers": ["Category", "Potential Issues"],
         "rows": [
@@ -41,7 +41,7 @@
         "hint": ""
       },
       "answer": {
-        "showAnswer": true,
+        "showAnswer": false,
         "type": "table",
         "headers": ["Category", "Considerations"],
         "rows": [
@@ -81,7 +81,7 @@
         "hint": ""
       },
       "answer": {
-        "showAnswer": true,
+        "showAnswer": false,
         "type": "table",
         "headers": ["Component", "Calculation", "Amount"],
         "rows": [
@@ -105,7 +105,7 @@
         "hint": ""
       },
       "answer": {
-        "showAnswer": true,
+        "showAnswer": false,
         "type": "table",
         "headers": ["Section", "Details"],
         "rows": [

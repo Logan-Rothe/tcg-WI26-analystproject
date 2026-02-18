@@ -13,7 +13,7 @@
         "hint": ""
       },
       "answer": {
-        "showAnswer": true,
+        "showAnswer": false,
         "type": "table",
         "headers": ["Category", "Considerations"],
         "rows": [
@@ -34,11 +34,16 @@
       "type": "writing",
       "content": {
         "prompt": "Here's some data on ticket demand and attendance patterns for the festival. What do you think about these graphs? How do you interpret this?",
-        "images": [],
+        "images": [
+          {
+            "url":"/recruitment/practice-cases/music-festival/music-festival-exhibit-one.png",
+            "alt":"Music Festival Days of the Week versus Capacity Sold Graph"
+          }
+        ],
         "hint": "Consider what the sell-out patterns suggest about pricing power and expansion potential"
       },
       "answer": {
-        "showAnswer": true,
+        "showAnswer": false,
         "type": "table",
         "headers": ["Interpretation", "Details"],
         "rows": [
@@ -58,7 +63,7 @@
         "hint": ""
       },
       "answer": {
-        "showAnswer": true,
+        "showAnswer": false,
         "type": "table",
         "headers": ["Step", "Calculation", "Result"],
         "rows": [
@@ -80,7 +85,7 @@
         "hint": "Consider both financial and brand/experience risks, and propose concrete mitigations"
       },
       "answer": {
-        "showAnswer": true,
+        "showAnswer": false,
         "type": "table",
         "headers": ["Risk Category", "Risk", "Mitigation Strategy"],
         "rows": [
@@ -101,7 +106,7 @@
         "hint": ""
       },
       "answer": {
-        "showAnswer": true,
+        "showAnswer": false,
         "type": "table",
         "headers": ["Section", "Details"],
         "rows": [

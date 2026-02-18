@@ -13,7 +13,7 @@
         "hint": ""
       },
       "answer": {
-        "showAnswer": true,
+        "showAnswer": false,
         "type": "table",
         "headers": ["Category", "Considerations"],
         "rows": [
@@ -34,11 +34,20 @@
       "type": "writing",
       "content": {
         "prompt": "Here's some data on how transit service is scheduled throughout the day, compared with when riders actually use the system. What do you think about these graphs? How do you interpret this?",
-        "images": [],
+        "images": [
+          {
+            "url":"/recruitment/practice-cases/city-public-transport/city-public-transport-exhibit-one.png",
+            "alt":"Share Of Service Hours Pie Chart"
+          },
+          {
+            "url":"/recruitment/practice-cases/city-public-transport/city-public-transport-exhibit-two.png",
+            "alt":"Percent Of Trips Pie Chart"
+          }
+        ],
         "hint": "Consider what the utilization patterns suggest about each option"
       },
       "answer": {
-        "showAnswer": true,
+        "showAnswer": false,
         "type": "table",
         "headers": ["Interpretation", "Details"],
         "rows": [
@@ -58,7 +67,7 @@
         "hint": ""
       },
       "answer": {
-        "showAnswer": true,
+        "showAnswer": false,
         "type": "table",
         "headers": ["Step", "Calculation", "Result"],
         "rows": [
@@ -80,7 +89,7 @@
         "hint": "Think beyond revenue - consider implementation, political feasibility, rider behavior, and operational strain"
       },
       "answer": {
-        "showAnswer": true,
+        "showAnswer": false,
         "type": "table",
         "headers": ["Risk Category", "Risk", "Mitigation Strategy"],
         "rows": [
@@ -101,7 +110,7 @@
         "hint": ""
       },
       "answer": {
-        "showAnswer": true,
+        "showAnswer": false,
         "type": "table",
         "headers": ["Section", "Details"],
         "rows": [

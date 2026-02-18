@@ -5,6 +5,7 @@ import { useState, useCallback } from 'react';
 import { CaseData, Section } from '../static/types';
 import WritingInput from './input/WritingInput';
 import Timer from './Timer';
+import GradingPage from './GradingPage';
 import styles from "./PracticeClient.module.css";
 
 
@@ -25,6 +26,7 @@ export default function PracticeClient({caseData, pathName} : Props){
     const [currentSection, setCurrentSection] = useState(0);
     const [userAnswers, setUserAnswers] = useState<UserAnswer[]>([]);
     const [timeExpired, setTimeExpired] = useState(false);
+    const [caseCompleted, setCaseCompleted] = useState(false);
 
     if(!caseData){
         return <div>Loading case data...</div>;
@@ -34,7 +36,7 @@ export default function PracticeClient({caseData, pathName} : Props){
     //representative of final section -> grading
     const isLastSection = currentSection == (numberOfSections - 1);
     const currentSectionType = caseData.sections[currentSection].type;
-
+    
     const handleTimeExpire = useCallback(() => {
         setTimeExpired(true);
         
@@ -52,58 +54,75 @@ export default function PracticeClient({caseData, pathName} : Props){
             //advance section
             setCurrentSection(currentSection + 1);
             setTimeExpired(false);
+        }else{
+            setCaseCompleted(true);
         }
+        
     }
     return(
         <>
             {/* Header */}
-            <div className={styles.header}>
-            <div className={styles.sectionLine}>
-                Section {currentSection + 1} of {numberOfSections}
-            </div>
+            {!caseCompleted && (
+                <>
+                    <div className={styles.header}>
+                    <div className={styles.sectionLine}>
+                        Section {currentSection + 1} of {numberOfSections}
+                    </div>
 
-            <div className={styles.nameRow}>
-                <span className={styles.nameLabel}>Name: </span>
-                <span className={styles.nameValue}>{currentSectionData?.name}</span>
-            </div>
+                    <div className={styles.nameRow}>
+                        <span className={styles.nameLabel}>Name: </span>
+                        <span className={styles.nameValue}>{currentSectionData?.name}</span>
+                    </div>
 
-        <   div className={styles.headerDivider} />
-            </div>
-            <div>
-                <Timer
-                    section={currentSectionData}
-                    duration={currentSectionData.time * 60}
-                    onExpire={handleTimeExpire}
-                >
+                    <div className={styles.headerDivider} />
+                    </div>
+                    <div>
+                        
+                        <Timer
+                            section={currentSectionData}
+                            duration={currentSectionData.time * 60}
+                            onExpire={handleTimeExpire}
+                        >
 
-                </Timer>
-            </div>
+                        </Timer>
+                        
+                    </div>
 
-            {/* Content */}
-            <div>
-                {currentSectionType === "writing" && (
-                    <WritingInput 
-                        section={currentSectionData}
-                        onSubmit={handleSectionComplete}
-                        timeExpired={timeExpired}
-                    />
-                )}
-                {currentSectionType === "brainstorm" && (
-                    
-                    <WritingInput 
-                        section={currentSectionData}
-                        onSubmit={handleSectionComplete}
-                        timeExpired={timeExpired}
-                    />
-                )}
-                {currentSectionType === "framework" && (
-                    <WritingInput 
-                        section={currentSectionData}
-                        onSubmit={handleSectionComplete}
-                        timeExpired={timeExpired}
-                    />
-                )}
-            </div>
+                    {/* Content */}
+                    <div>
+                        {currentSectionType === "writing" && (
+                            <WritingInput 
+                                section={currentSectionData}
+                                onSubmit={handleSectionComplete}
+                                timeExpired={timeExpired}
+                            />
+                        )}
+                        {currentSectionType === "brainstorm" && (
+                            
+                            <WritingInput 
+                                section={currentSectionData}
+                                onSubmit={handleSectionComplete}
+                                timeExpired={timeExpired}
+                            />
+                        )}
+                        {currentSectionType === "framework" && (
+                            <WritingInput 
+                                section={currentSectionData}
+                                onSubmit={handleSectionComplete}
+                                timeExpired={timeExpired}
+                            />
+                        )}
+                    </div>
+                </>
+            )}
+
+            {/*Grading Page */}
+            {caseCompleted && (
+                <GradingPage 
+                    caseData = {caseData}
+                    userAnswers = {userAnswers}
+                />
+            )}
         </>
     )
 }
