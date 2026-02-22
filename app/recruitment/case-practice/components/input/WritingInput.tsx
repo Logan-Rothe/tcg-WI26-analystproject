@@ -6,9 +6,10 @@ interface Props {
     section: Section;
     onSubmit: (answer: string) => void;
     timeExpired: boolean;
+    storageKey: string;
 }
 
-export default function WritingInput({ section, onSubmit, timeExpired }: Props) {
+export default function WritingInput({ section, onSubmit, timeExpired, storageKey }: Props) {
     const [answer, setAnswer] = useState('');
     const hasSubmitted = useRef(false);
     const[left, setLeftWidth] = useState(50);
@@ -27,6 +28,20 @@ export default function WritingInput({ section, onSubmit, timeExpired }: Props) 
         setAnswer('');
         hasSubmitted.current = false;
     }, [section]);
+
+    useEffect(() => {
+        const saved = sessionStorage.getItem(storageKey);
+        if (saved) {
+            const parsed = JSON.parse(saved);
+            if (parsed.currentText !== undefined) setAnswer(parsed.currentText);
+        }
+    }, []);
+
+    useEffect(() => {
+        const saved = sessionStorage.getItem(storageKey);
+        const base = saved ? JSON.parse(saved) : {};
+        sessionStorage.setItem(storageKey, JSON.stringify({ ...base, currentText: answer }));
+    }, [answer]);
 
     const isDragging = useRef(false);
     const handleMouseDown = () => {

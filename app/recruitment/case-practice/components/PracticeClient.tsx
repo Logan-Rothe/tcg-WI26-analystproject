@@ -1,12 +1,12 @@
 'use client'
 //logic runner for case
 
-import { useState, useCallback } from 'react';
-import { CaseData, Section } from '../static/types';
-import WritingInput from './input/WritingInput';
-import Timer from './Timer';
+import { useCallback, useEffect, useState } from 'react';
+import { CaseData } from '../static/types';
 import GradingPage from './GradingPage';
+import WritingInput from './input/WritingInput';
 import styles from "./PracticeClient.module.css";
+import Timer from './Timer';
 
 
 interface Props {
@@ -27,6 +27,10 @@ export default function PracticeClient({caseData, pathName} : Props){
     const [userAnswers, setUserAnswers] = useState<UserAnswer[]>([]);
     const [timeExpired, setTimeExpired] = useState(false);
     const [caseCompleted, setCaseCompleted] = useState(false);
+    const storageKey = `case-progress-${pathName}`;
+    useEffect(() => {
+        sessionStorage.setItem(storageKey, JSON.stringify({ currentSection, userAnswers }));
+    }, [currentSection, userAnswers]);
 
     if(!caseData){
         return <div>Loading case data...</div>;
@@ -55,6 +59,7 @@ export default function PracticeClient({caseData, pathName} : Props){
             setCurrentSection(currentSection + 1);
             setTimeExpired(false);
         }else{
+            sessionStorage.removeItem(storageKey);
             setCaseCompleted(true);
         }
         
@@ -95,6 +100,7 @@ export default function PracticeClient({caseData, pathName} : Props){
                                 section={currentSectionData}
                                 onSubmit={handleSectionComplete}
                                 timeExpired={timeExpired}
+                                storageKey={storageKey}
                             />
                         )}
                         {currentSectionType === "brainstorm" && (
@@ -103,6 +109,7 @@ export default function PracticeClient({caseData, pathName} : Props){
                                 section={currentSectionData}
                                 onSubmit={handleSectionComplete}
                                 timeExpired={timeExpired}
+                                storageKey={storageKey}
                             />
                         )}
                         {currentSectionType === "framework" && (
@@ -110,6 +117,7 @@ export default function PracticeClient({caseData, pathName} : Props){
                                 section={currentSectionData}
                                 onSubmit={handleSectionComplete}
                                 timeExpired={timeExpired}
+                                storageKey={storageKey}
                             />
                         )}
                     </div>
