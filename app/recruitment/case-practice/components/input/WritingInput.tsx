@@ -12,7 +12,7 @@ interface Props {
 export default function WritingInput({ section, onSubmit, timeExpired, storageKey }: Props) {
     const [answer, setAnswer] = useState('');
     const hasSubmitted = useRef(false);
-    const[left, setLeftWidth] = useState(50);
+    const [left, setLeftWidth] = useState(50);
     const contRef = useRef<HTMLDivElement>(null);
     useEffect(() => {
         if (timeExpired && !hasSubmitted.current) {
@@ -33,15 +33,22 @@ export default function WritingInput({ section, onSubmit, timeExpired, storageKe
         const saved = sessionStorage.getItem(storageKey);
         if (saved) {
             const parsed = JSON.parse(saved);
-            if (parsed.currentText !== undefined) setAnswer(parsed.currentText);
+            const draftKey = `draft_${section.name}`;
+            if (parsed[draftKey] !== undefined) {
+                setAnswer(parsed[draftKey]);
+            }
         }
-    }, []);
+    }, [section]);
 
     useEffect(() => {
         const saved = sessionStorage.getItem(storageKey);
         const base = saved ? JSON.parse(saved) : {};
-        sessionStorage.setItem(storageKey, JSON.stringify({ ...base, currentText: answer }));
-    }, [answer]);
+        const draftKey = `draft_${section.name}`;
+        sessionStorage.setItem(storageKey, JSON.stringify({
+            ...base,
+            [draftKey]: answer
+        }));
+    }, [answer, section.name]);
 
     const isDragging = useRef(false);
     const handleMouseDown = () => {
@@ -74,21 +81,21 @@ export default function WritingInput({ section, onSubmit, timeExpired, storageKe
         <div
             className={styles.container}
             ref={contRef}
-            >
+        >
             <div
                 className={styles.leftPanel}
-                style={{ width: `${left}%`}}
+                style={{ width: `${left}%` }}
             >
                 <p className={styles.prompt}>
                     {section.content.prompt}
                 </p>
                 {/* Images Section */}
                 {section.content.images.map((img, idx) => (
-                    <img 
-                        key={idx} 
-                        src={img.url} 
+                    <img
+                        key={idx}
+                        src={img.url}
                         alt={img.alt}
-                        className={styles.image} 
+                        className={styles.image}
                     />
                 ))}
                 {/* Hint Section */}
@@ -102,7 +109,7 @@ export default function WritingInput({ section, onSubmit, timeExpired, storageKe
             />
             <div
                 className={styles.rightPanel}
-                style={{ width: `${100 - left}%`}}
+                style={{ width: `${100 - left}%` }}
             >
                 <textarea
                     className={styles.textarea}
