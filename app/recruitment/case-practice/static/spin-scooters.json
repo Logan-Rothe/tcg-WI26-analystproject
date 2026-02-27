@@ -13,7 +13,7 @@
         "hint": ""
       },
       "answer": {
-        "showAnswer": false,
+        "showAnswer": true,
         "type": "table",
         "headers": ["Category", "Potential Issues"],
         "rows": [

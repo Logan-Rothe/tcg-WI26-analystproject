@@ -222,9 +222,8 @@ export default function GradingPage({ caseData, userAnswers }: Props) {
                 </button>
             </div>
 
-            {/* Two-column layout with divider */}
             <div className={styles.container} ref={contRef}>
-                {/* Recommended Answers - Left Panel */}
+                {/* Recommended Answers */}
                 <div className={styles.leftPanel} style={{ width: `${left}%` }}>
                     <h2 className={styles.panelTitle}>Recommended Answers</h2>
 
@@ -254,7 +253,7 @@ export default function GradingPage({ caseData, userAnswers }: Props) {
                                 <p className={styles.hint}>{section.content.hint}</p>
                             )}
 
-                            {/* Answer - Table or Text */}
+                            {/* Answer */}
                             <div className={styles.answerSection}>
                                 {section.answer.type === 'table' && (
                                     <table className={styles.table}>
@@ -291,7 +290,7 @@ export default function GradingPage({ caseData, userAnswers }: Props) {
                     onMouseDown={handleMouseDown}
                 />
 
-                {/* User Answers - Right Panel */}
+                {/* User Answers */}
                 <div className={styles.rightPanel} style={{ width: `${100 - left}%` }}>
                     <h2 className={styles.panelTitle}>Your Answer</h2>
 
