@@ -1,14 +1,12 @@
 'use client'
-//logic runner for case
 
 import { useCallback, useEffect, useState } from 'react';
 import { CaseData } from '../static/types';
 import GradingPage from './GradingPage';
 import WritingInput from './input/WritingInput';
 import styles from "./PracticeClient.module.css";
-import Timer from './Timer';
 import SectionAnswer from './SectionAnswer';
-
+import Timer from './Timer';
 
 interface Props {
     caseData : CaseData | null;
@@ -23,24 +21,40 @@ interface UserAnswer{
 
 export default function PracticeClient({caseData, pathName} : Props){
     
-    //all state variables
+    const storageKey = `case-progress-${pathName}`;
     const [currentSection, setCurrentSection] = useState(0);
     const [userAnswers, setUserAnswers] = useState<UserAnswer[]>([]);
     const [timeExpired, setTimeExpired] = useState(false);
     const [caseCompleted, setCaseCompleted] = useState(false);
     const [showAnswer, setShowAnswer] = useState(false);
+    const [hydrated, setHydrated] = useState(false);
 
-    const storageKey = `case-progress-${pathName}`;
     useEffect(() => {
-        sessionStorage.setItem(storageKey, JSON.stringify({ currentSection, userAnswers }));
-    }, [currentSection, userAnswers]);
+        const saved = sessionStorage.getItem(storageKey);
+        if (saved) {
+            const parsed = JSON.parse(saved);
+            if (parsed.currentSection !== undefined) setCurrentSection(parsed.currentSection);
+            if (parsed.userAnswers !== undefined) setUserAnswers(parsed.userAnswers);
+            if (parsed.showAnswer !== undefined) setShowAnswer(parsed.showAnswer);
+        }
+        setHydrated(true);
+        return () => {
+            sessionStorage.removeItem(storageKey);
+            setHydrated(false);
+        };
+    }, []);
+
+    useEffect(() => {
+        if (!hydrated) return;
+        sessionStorage.setItem(storageKey, JSON.stringify({ currentSection, userAnswers, showAnswer }));
+    }, [currentSection, userAnswers, hydrated]);
 
     if(!caseData){
         return <div>Loading case data...</div>;
     }
+
     const currentSectionData = caseData.sections[currentSection];
     const numberOfSections = caseData.sections.length;
-    //representative of final section -> grading
     const isLastSection = currentSection == (numberOfSections - 1);
     
     const moveToNextSection = () => {
@@ -49,66 +63,57 @@ export default function PracticeClient({caseData, pathName} : Props){
             setTimeExpired(false);
             setShowAnswer(false);
         } else {
-            // Case completed
             sessionStorage.removeItem(storageKey);
+            setHydrated(false);
             setCaseCompleted(true);
         }
     };
 
-    
     const handleTimeExpire = useCallback(() => {
         setTimeExpired(true);
     }, []);
 
-    const handleSectionComplete = (userInput : string) => {
+    const handleSectionComplete = (userInput: string) => {
         const newAnswer: UserAnswer = {
             sectionIndex: currentSection,
             sectionName: currentSectionData.name,
             userInput: userInput
         };
-
         setUserAnswers([...userAnswers, newAnswer]);
-        // Check if we should show answer
         if (currentSectionData.answer.showAnswer) {
             setTimeExpired(true);
             setShowAnswer(true);
         } else {
-            // No answer to show, move on immediately
             moveToNextSection();
         }
-        
     }
+
     return(
         <>
-            {/* Header */}
             {!caseCompleted && (
                 <>
                     <div className={styles.header}>
-                    <div className={styles.sectionLine}>
-                        Section {currentSection + 1} of {numberOfSections}
+                        <div className={styles.sectionLine}>
+                            Section {currentSection + 1} of {numberOfSections}
+                        </div>
+                        <div className={styles.nameRow}>
+                            <span className={styles.nameLabel}>Name: </span>
+                            <span className={styles.nameValue}>{currentSectionData?.name}</span>
+                        </div>
+                        <div className={styles.headerDivider} />
                     </div>
 
-                    <div className={styles.nameRow}>
-                        <span className={styles.nameLabel}>Name: </span>
-                        <span className={styles.nameValue}>{currentSectionData?.name}</span>
-                    </div>
-
-                    <div className={styles.headerDivider} />
-                    </div>
                     <div>
-                        
-                        {!showAnswer && (
+                        {!showAnswer && hydrated &&(
                             <Timer
-                            section={currentSectionData}
-                            duration={currentSectionData.time * 60}
-                            onExpire={handleTimeExpire}
-                            >
-                            </Timer>
+                                section={currentSectionData}
+                                duration={currentSectionData.time * 60}
+                                onExpire={handleTimeExpire}
+                                storageKey={storageKey}
+                            />
                         )}
-                        
                     </div>
 
-                    {/* Content */}
                     <div>
                         {!showAnswer ? (
                             <WritingInput 
@@ -116,27 +121,25 @@ export default function PracticeClient({caseData, pathName} : Props){
                                 onSubmit={handleSectionComplete}
                                 timeExpired={timeExpired}
                                 storageKey={storageKey}
+                                isLastSection={isLastSection}
                             />
                         ) : (
-                                <SectionAnswer
-                                    section={currentSectionData}
-                                    sectionNumber={currentSection+1}
-                                    userAnswer={userAnswers[currentSection]?.userInput || ''}
-                                    onNext={moveToNextSection}
-                                    isLastSection={isLastSection}
-                                />
-
-                                
+                            <SectionAnswer
+                                section={currentSectionData}
+                                sectionNumber={currentSection + 1}
+                                userAnswer={userAnswers[currentSection]?.userInput || ''}
+                                onNext={moveToNextSection}
+                                isLastSection={isLastSection}
+                            />
                         )}
                     </div>
                 </>
             )}
 
-            {/*Grading Page */}
             {caseCompleted && (
-                <GradingPage 
-                    caseData = {caseData}
-                    userAnswers = {userAnswers}
+                <GradingPage
+                    caseData={caseData}
+                    userAnswers={userAnswers}
                 />
             )}
         </>
