@@ -38,6 +38,10 @@ export default function PracticeClient({caseData, pathName} : Props){
             if (parsed.showAnswer !== undefined) setShowAnswer(parsed.showAnswer);
         }
         setHydrated(true);
+        return () => {
+            sessionStorage.removeItem(storageKey);
+            setHydrated(false);
+        };
     }, []);
 
     useEffect(() => {
