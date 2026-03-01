@@ -121,6 +121,7 @@ export default function PracticeClient({caseData, pathName} : Props){
                                 onSubmit={handleSectionComplete}
                                 timeExpired={timeExpired}
                                 storageKey={storageKey}
+                                isLastSection={isLastSection}
                             />
                         ) : (
                             <SectionAnswer

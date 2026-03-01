@@ -122,7 +122,7 @@ export default function WritingInput({ section, onSubmit, timeExpired, storageKe
                     className={styles.applyButton}
                     onClick={() => onSubmit(answer)}
                 >
-                    {isLastSection ? 'Skip to Next Section' : 'Skip to Grading Page' }
+                    {isLastSection ? 'Skip to Grading Page' : 'Skip to Next Section' }
                 </button>
             </div>
         </div>
