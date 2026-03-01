@@ -7,9 +7,10 @@ interface Props {
     onSubmit: (answer: string) => void;
     timeExpired: boolean;
     storageKey: string;
+    isLastSection: boolean;
 }
 
-export default function WritingInput({ section, onSubmit, timeExpired, storageKey }: Props) {
+export default function WritingInput({ section, onSubmit, timeExpired, storageKey, isLastSection }: Props) {
     const [answer, setAnswer] = useState('');
     const hasSubmitted = useRef(false);
     const [left, setLeftWidth] = useState(50);
@@ -121,7 +122,7 @@ export default function WritingInput({ section, onSubmit, timeExpired, storageKe
                     className={styles.applyButton}
                     onClick={() => onSubmit(answer)}
                 >
-                    Skip to Next Section
+                    {isLastSection ? 'Skip to Next Section' : 'Skip to Grading Page' }
                 </button>
             </div>
         </div>
