@@ -35,13 +35,14 @@ export default function PracticeClient({caseData, pathName} : Props){
             const parsed = JSON.parse(saved);
             if (parsed.currentSection !== undefined) setCurrentSection(parsed.currentSection);
             if (parsed.userAnswers !== undefined) setUserAnswers(parsed.userAnswers);
+            if (parsed.showAnswer !== undefined) setShowAnswer(parsed.showAnswer);
         }
         setHydrated(true);
     }, []);
 
     useEffect(() => {
         if (!hydrated) return;
-        sessionStorage.setItem(storageKey, JSON.stringify({ currentSection, userAnswers }));
+        sessionStorage.setItem(storageKey, JSON.stringify({ currentSection, userAnswers, showAnswer }));
     }, [currentSection, userAnswers, hydrated]);
 
     if(!caseData){
@@ -59,6 +60,7 @@ export default function PracticeClient({caseData, pathName} : Props){
             setShowAnswer(false);
         } else {
             sessionStorage.removeItem(storageKey);
+            setHydrated(false);
             setCaseCompleted(true);
         }
     };
