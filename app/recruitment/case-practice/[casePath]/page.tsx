@@ -4,10 +4,28 @@
 import { getCaseByPathName } from "../static";
 import styles from './page.module.css';
 import Link from 'next/link';
+import { Metadata } from 'next';
 interface Props {
     params: {
         casePath : string;
     }
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+    const promiseResolvedParams = await params;
+    const pathName = promiseResolvedParams.casePath;
+    const caseJsonData = getCaseByPathName(pathName);
+    
+    if (!caseJsonData) {
+        return {
+            title: 'Case Not Found - TCG',
+        };
+    }
+    
+    return {
+        title: `${caseJsonData.name} - TCG`,
+        description: caseJsonData.description,
+    };
 }
 
 export default async function caseInformationPage({params} : Props){

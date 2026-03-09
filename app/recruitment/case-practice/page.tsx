@@ -5,6 +5,11 @@ import { getAllCases } from './static';
 import { CaseData } from './static/types';
 //This page contains all of the cases
 //TODO: Build case selection component
+
+export const metadata = {
+  title: 'Practice Cases - TCG',
+};
+
 export default function CaseLandingPage(){
     
     //all cases in name-of-path: json data
