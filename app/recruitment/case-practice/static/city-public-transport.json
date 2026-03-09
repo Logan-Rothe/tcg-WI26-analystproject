@@ -8,7 +8,7 @@
       "time": 10,
       "type": "writing",
       "content": {
-        "prompt": "A mid-sized city's public transit system has been losing money in recent years. City leaders are considering two solutions to improve the system's financial sustainability. Option A is to lower fares across the system to increase ridership. Option B is to reduce the servicing of low-utilization routes to cut operating costs. With your group, develop a framework to evaluate these two options. Think about what factors matter and how you would compare the tradeoffs. Feel free to ask me as many clarifying questions as you would like. When you're ready, present your brainstorm to me as if I did not hear your discussion.",
+        "prompt": "A mid-sized city's public transit system has been losing money in recent years. City leaders are considering two solutions to improve the system's financial sustainability. Option A is to lower fares across the system to increase ridership. Option B is to reduce the servicing of low-utilization routes to cut operating costs. Develop a framework to evaluate these two options. Think about what factors matter and how you would compare the tradeoffs.",
         "images": [],
         "hint": ""
       },
@@ -62,7 +62,7 @@
       "time": 15,
       "type": "writing",
       "content": {
-        "prompt": "The city is hesitant to cut public transit service due to equity concerns. Therefore, they want to look into the logistics of option A (lowering fare rates to increase ridership). The annual ridership is 160 million, the fare per ride is $3.50, and the proposed new fare per ride is $3.00. Please use this data and discuss with your group to answer the following question: if the city lowers fares as proposed, how much would ridership need to increase to increase revenue by 10%?",
+        "prompt": "The city is hesitant to cut public transit service due to equity concerns. Therefore, they want to look into the logistics of option A (lowering fare rates to increase ridership). The annual ridership is 160 million, the fare per ride is $3.50, and the proposed new fare per ride is $3.00. Please use this data and answer the following question: if the city lowers fares as proposed, how much would ridership need to increase to increase revenue by 10%?",
         "images": [],
         "hint": ""
       },
@@ -84,7 +84,7 @@
       "time": 10,
       "type": "writing",
       "content": {
-        "prompt": "Based on your analysis, the city is leaning toward lowering fares to increase ridership. With your group, brainstorm the key risks or challenges of implementing this strategy and how the city could mitigate them.",
+        "prompt": "Based on your analysis, the city is leaning toward lowering fares to increase ridership. Brainstorm the key risks or challenges of implementing this strategy and how the city could mitigate them.",
         "images": [],
         "hint": "Think beyond revenue - consider implementation, political feasibility, rider behavior, and operational strain"
       },
@@ -105,7 +105,7 @@
       "time": 10,
       "type": "writing",
       "content": {
-        "prompt": "Your team is about to present to the city's council. They expect to hear about your findings of which solution is better and why. Finalize your team's recommendation and present your conclusion and next steps to them.",
+        "prompt": "You are about to present to the city's council. They expect to hear about your findings of which solution is better and why. Finalize your recommendation and present your conclusion and next steps to them.",
         "images": [],
         "hint": ""
       },

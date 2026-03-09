@@ -8,7 +8,7 @@
       "time": 10,
       "type": "writing",
       "content": {
-        "prompt": "Our client is Spin, a company that operates electric scooters on the UC San Diego campus. Historically, usage was strong, especially during peak hours when students needed quick rides in between classes. However, average monthly rides have declined steadily over the past few quarters, resulting in lower revenue and overall profitability. Spin has hired your team at TCG to investigate this decline and explore potential solutions to reverse the trend. Please brainstorm reasons as to why the business might see a decline in revenue and for each reason, examples of what that could specifically look like for Spin. Feel free to ask me as many clarifying questions as you would like. Once you feel settled in your brainstorm, present the brainstorm to me as if I did not hear your discussion.",
+        "prompt": "Our client is Spin, a company that operates electric scooters on the UC San Diego campus. Historically, usage was strong, especially during peak hours when students needed quick rides in between classes. However, average monthly rides have declined steadily over the past few quarters, resulting in lower revenue and overall profitability. Spin has hired you at TCG to investigate this decline and explore potential solutions to reverse the trend. List any clarifying questions you would ask the client and brainstorm potential reasons for the revenue decline, including examples of how each might appear in Spin’s operations.",
         "images": [],
         "hint": ""
       },
@@ -36,7 +36,7 @@
       "time": 10,
       "type": "framework",
       "content": {
-        "prompt": "Using survey data, your team has found that a primary reason for the usage drop is that students are often unable to unlock scooters due to spotty cellular service on parts of campus. To combat this, Spin's team has developed a solution that achieves a 100% success rate: a tap-to-ride system that allows students to unlock scooters using their UCSD ID, with no cellular connection required. Spin has requested that your team develop a framework to assess whether this feature is a good investment.",
+        "prompt": "Using survey data, you have found that a primary reason for the usage drop is that students are often unable to unlock scooters due to spotty cellular service on parts of campus. To combat this, Spin's team has developed a solution that achieves a 100% success rate: a tap-to-ride system that allows students to unlock scooters using their UCSD ID, with no cellular connection required. Develop a framework to assess whether this tap-to-ride feature is a worthwhile investment for Spin.",
         "images": [],
         "hint": ""
       },
@@ -71,7 +71,7 @@
       "time": 5,
       "type": "writing",
       "content": {
-        "prompt": "As part of your evaluation, Spin has provided your team with the following operational and financial data related to their estimated implementation and projected impact. Spin expects a 30% increase in monthly rides with this feature. Spin wants to know if this feature will help them break even within 12 months of implementation. The following exhibit includes these cost estimates.",
+        "prompt": "As part of your evaluation, Spin has provided you with the following operational and financial data related to their estimated implementation and projected impact. Spin expects a 30% increase in monthly rides with this feature. The following exhibit includes these cost estimates. Using the exhibit, determine whether Spin will break even within 12 months.",
         "images": [
           {
             "url": "/recruitment/practice-cases/spin-scooter/spin-scooter-exhibit-one.png",
@@ -100,7 +100,7 @@
       "time": 10,
       "type": "writing",
       "content": {
-        "prompt": "The CEO of Spin is at UCSD right now, asking what your findings have been and whether this proposal would be a good idea. Finalize your team's recommendation and present your conclusion and next steps to her.",
+        "prompt": "The CEO of Spin is at UCSD right now, asking what your findings have been and whether this proposal would be a good idea. Finalize your recommendation and present your conclusion and next steps to her.",
         "images": [],
         "hint": ""
       },

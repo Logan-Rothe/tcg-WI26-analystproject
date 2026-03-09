@@ -8,7 +8,7 @@
       "time": 10,
       "type": "writing",
       "content": {
-        "prompt": "A well-known annual music festival has been operating successfully in one city for several years, but despite consistently selling out tickets, it has seen flat revenue growth. Festival leadership aims to increase total revenue for the upcoming festival season and is considering two potential strategies. Option A is to increase ticket prices. Option B is to add a second weekend to the festival. With your group, develop a framework to evaluate these two options. Think about what factors matter and how you would compare the tradeoffs. Feel free to ask me as many clarifying questions as you would like. When you're ready, present your brainstorm to me as if I did not hear your discussion.",
+        "prompt": "A well-known annual music festival has been operating successfully in one city for several years, but despite consistently selling out tickets, it has seen flat revenue growth. Festival leadership aims to increase total revenue for the upcoming festival season and is considering two potential strategies. Option A is to increase ticket prices. Option B is to add a second weekend to the festival. Develop a framework to evaluate these two options. Think about what factors matter and how you would compare the tradeoffs.",
         "images": [],
         "hint": ""
       },
@@ -80,7 +80,7 @@
       "time": 10,
       "type": "writing",
       "content": {
-        "prompt": "Based on your analysis, festival leadership is leaning toward Option A (raising ticket prices). With your group, brainstorm the key risks or challenges of implementing this strategy and how the festival could mitigate them.",
+        "prompt": "Based on your analysis, festival leadership is leaning toward Option A (raising ticket prices). Brainstorm the key risks or challenges of implementing this strategy and how the festival could mitigate them.",
         "images": [],
         "hint": "Consider both financial and brand/experience risks, and propose concrete mitigations"
       },
@@ -101,7 +101,7 @@
       "time": 10,
       "type": "writing",
       "content": {
-        "prompt": "Your team is about to present to festival leadership. They expect to hear which option you recommend and why. With your team, finalize your recommendation and outline next steps.",
+        "prompt": "You are about to present to festival leadership. They expect to hear which option you recommend and why. Finalize your recommendation and outline next steps.",
         "images": [],
         "hint": ""
       },
