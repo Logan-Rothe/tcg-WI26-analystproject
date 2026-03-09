@@ -238,6 +238,12 @@ Explains applicant eligibility, quarter timing, and Analyst Program.
 Image: /Recruitment2Photo.avif
 Button → Case Prep Resources playlist.
 
+Case Learning
+
+Explains the first round of interview, and summarizes the case learning tool
+Image: /recruitment-tecg.png
+Button → Case Practice Page
+
 Recruitment Timeline
 
 Five steps, exactly matching code text:
@@ -314,8 +320,14 @@ Subject
 
 Message
 
-9. Setup, Maintenance & Deployment
-9.1 Project Structure
+9. Case Practice
+
+Practice Case Items
+  Button → Takes to opener page for the respective case
+Example: City Public Transit Sustainability Case
+
+10. Setup, Maintenance & Deployment
+10.1 Project Structure
 
 Suggested folder layout (fill in as needed):
 
@@ -325,7 +337,7 @@ Suggested folder layout (fill in as needed):
 /assets
 /public
 
-9.2 Tech Stack
+10.2 Tech Stack
 
 Next.js
 
@@ -338,13 +350,13 @@ CSS Modules
 Vercel hosting
 (Add more if using Prisma, Tailwind, Sanity, etc.)
 
-9.3 Local Setup
+10.3 Local Setup
 git clone https://github.com/F3rando/tcg-techtrack-site.git
 cd tcg-techtrack-site
 npm install
 npm run dev
 
-9.4 Updating Content
+10.4 Updating Content
 
 Editing text: Edit corresponding page in /app/...
 
@@ -352,7 +364,7 @@ Updating images: Save new images in /public/ and update references
 
 Adding new sections: Follow existing component structure + CSS module patterns
 
-9.5 Deployment
+10.5 Deployment
 Hosting
 
 Vercel
