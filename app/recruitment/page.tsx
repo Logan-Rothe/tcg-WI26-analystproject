@@ -112,15 +112,13 @@ export default function RecruitmentPage() {
               In order to prep for case nights, we have provided example cases as practice. It flows through the case portion by portion, timing each portion as would during case night. At the end, students may export a PDF of their answers along with the TCG provided answers to review. Best of luck to everyone!
             </p>
 
-            <a
+            <Link
                href="/recruitment/case-practice"
-                target="_blank"
-                 rel="noopener noreferrer"
                  className={styles.applyButton}
                  style={{ marginTop: 18 }}
                >
                 Practice Cases
-                </a>
+                </Link>
             
           </div>
         </div>
